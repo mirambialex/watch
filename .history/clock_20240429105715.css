@@ -1,0 +1,49 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+body{
+    background: linear-gradient(to right,rgb(255,0,128),hsl(175,100%,50%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    
+}
+.CLOCK{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(255,255,255,.9);
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+}
+.CLOCK.NUMBER{
+    --rotation:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
+
+    .CLOCK.NUMBER1{--rotation:30deg}
+    .CLOCK.NUMBER2{--rotation:60deg}
+    .CLOCK.NUMBER3{--rotation:90deg}
+    .CLOCK.NUMBER4{--rotation:120deg}
+    .CLOCK.NUMBER5{--rotation:150deg}
+    .CLOCK.NUMBER6{--rotation:180deg}
+    .CLOCK.NUMBER7{--rotation:210deg}
+    .CLOCK.NUMBER8{--rotation:240deg}
+    .CLOCK.NUMBER9{--rotation:270deg}
+    .CLOCK.NUMBER10{--rotation:300deg}
+    .CLOCK.NUMBER11{--rotation:330deg}
+
+}
+.CLOCK.hand{
+    --rotation:0;
+    position:absolute;
+    bottom: 50;
+}

@@ -1,0 +1,105 @@
+*, *::after,*::before{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+body{
+    background: linear-gradient(to right,rgb(255,0,128),hsl(175,100%,50%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(255,255,255,.9);
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+}
+.clock.NUMBER{
+    --rotation:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
+
+    .CLOCK.NUMBER1{--rotation:30deg}
+    .CLOCK.NUMBER2{--rotation:60deg}
+    .CLOCK.NUMBER3{--rotation:90deg}
+    .CLOCK.NUMBER4{--rotation:120deg}
+    .CLOCK.NUMBER5{--rotation:150deg}
+    .CLOCK.NUMBER6{--rotation:180deg}
+    .CLOCK.NUMBER7{--rotation:210deg}
+    .CLOCK.NUMBER8{--rotation:240deg}
+    .CLOCK.NUMBER9{--rotation:270deg}
+    .CLOCK.NUMBER10{--rotation:300deg}
+    .CLOCK.NUMBER11{--rotation:330deg}
+
+}
+.clock.hand{
+    --rotation:0;
+    position:absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: black;
+    border: 1px solid rgb(136,99,224);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index:10;
+    transform: translateX(-50%)rotation(calc(var--rotation)*1deg));
+
+}
+.clock::after{
+    content: " ";
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 15;
+    height: 15;
+    top:5%;
+    left: 50%;
+    transform: translateX(-50%,-50%);
+    border-radius: 50%;
+
+}
+.clock.hand.second{
+    width: 3px;
+    height: 45%;
+    background-color: rgb(221,65,198);
+}
+.clock.hand.minute{
+    width: 7px;
+    height: 40%;
+    border-color: rgb(69,19,187);
+
+}
+.clock.hand.hour{
+    width: 10px;
+    height: 35%;
+    background-color: rgb(166,209,9);
+}
+.header{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-transform: capitalize;
+    width: 100px;
+    background-color: blueviolet;
+    position: top;
+}
+.hour hand,
+.minute hand.
+.second hand{
+position: absolute;
+top: 50%;
+left: 50%;
+height: 5px;
+width: 40%;
+background-color: gray;
+}
